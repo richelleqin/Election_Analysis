@@ -24,11 +24,12 @@ The purpose of this election audit is to evaluate the voter turnout for each cou
 
 ## Election-Audit Summary
 
-### Buisness Proposal 
+### Buisness Proposal 1
 
 Every election has candidates and voter turnout. If we were to use this script in other elections, we just have to ensure that the candidate name and the county_name (or any field that we need to figure out the voter turnout from) refers the correct columns respectively. For example, in this case, the candidate name is on column 3 of the file. If the candidate name is on column 5 in the new election, then we must ensure that candidate_name = row[4]. Likewise, if we wish to figure out the voter turnout for a city, and city was column 8 in the new election, then county_name = row[1] should instead read city_name = row[7] and all iterations of the word county within the code should be renamed to city instead. We need to modify the following code to adjust to the new columns.
 
 ![Capture](https://user-images.githubusercontent.com/67567087/150656371-47fb93a0-b76d-4215-a4b9-2653fabb047a.PNG)
 
+### Business Proposal 2
 Also, we may need to be cautious on the invalid votes such as null values in which could be caused by data entry error. For example, there could be a record under candidate name but the county name associated it is missing. In this senario, we would have to eliminate the false record. 
 
